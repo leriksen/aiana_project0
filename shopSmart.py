@@ -32,7 +32,7 @@ def shopSmart(orderList, fruitShops):
 
     cheapest = {
         'shop': object(),
-        'total': 800000000.0
+        'total': sys.float_info.max
     }
 
     for shop in fruitShops:
