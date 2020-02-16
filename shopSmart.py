@@ -24,6 +24,7 @@ from __future__ import print_function
 import shop
 import sys
 
+
 def shopSmart(orderList, fruitShops):
     """
         orderList: List of (fruit, numPound) tuples
@@ -35,11 +36,11 @@ def shopSmart(orderList, fruitShops):
         'total': sys.float_info.max
     }
 
-    for shop in fruitShops:
-        total = shop.getPriceOfOrder(orderList)
+    for this_shop in fruitShops:
+        total = this_shop.getPriceOfOrder(orderList)
 
         if total < cheapest['total']:
-            cheapest['shop'] = shop
+            cheapest['shop'] = this_shop
             cheapest['total'] = total
 
     return cheapest['shop']
